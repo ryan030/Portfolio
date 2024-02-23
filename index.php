@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ryan Alterado Portfolio Website</title>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/modal.css">
+
     <link rel="stylesheet"
   href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,10 +23,28 @@
             <li><a href="#">Curriculum Vitea</a> </li>
             <li><a href="#">Contacts</a></li>
         </ul>
-        <div class="menuBtn">
-            <span>MENU</span>
-            <div class="bx bx-menu" id="menuIcon"></div>
-        </div>
+        <div class="menuBtn" id="loginBtn">
+    <span>Login</span>
+    <div class="bx" id="menuIcon"></div>
+</div>
+
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <!-- Your login form goes here -->
+        <form action="admin/admin_login.php" method="post">
+            <!-- Your login form fields go here -->
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</div>
+
     </header>
     <section class="home" id="home">
     <div class="homeImg">
@@ -60,5 +80,29 @@
     </section>
    
     <script src="js/script.js"></script>
+    <script>
+    // Get modal and buttons
+    var modal = document.getElementById('loginModal');
+    var loginBtn = document.getElementById('loginBtn');
+    var closeModal = document.getElementById('closeModal');
+
+    // Show the modal
+    loginBtn.onclick = function() {
+        modal.style.display = 'block';
+    }
+
+    // Close the modal
+    closeModal.onclick = function() {
+        modal.style.display = 'none';
+    }
+
+    // Close the modal if the overlay is clicked
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
+</script>
+
 </body>
 </html>
