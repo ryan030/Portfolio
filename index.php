@@ -15,7 +15,7 @@
     <header>
         <a href="#" class="logo"><span>R</span>yan</a>
         <ul class="navbar">
-            <li><a href="#home">Home</a></li>
+            <li><a href="#home">lelo</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Curriculum Vitea</a> </li>
