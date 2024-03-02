@@ -31,9 +31,9 @@
 <div id="loginModal" class="modal">
     <div class="modal-content">
         <span class="close" id="closeModal">&times;</span>
-        <!-- Your login form goes here -->
+        <!-- login form goes here -->
         <form action="admin/admin_login.php" method="post">
-            <!-- Your login form fields go here -->
+            <!-- login form fields go here -->
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
             
